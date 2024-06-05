@@ -5,8 +5,8 @@ import Footer from './Components/Footer';
 import Heading from './Components/Heading';
 import Copyright from './Components/Copyright';
 
-function App() {
 
+function App() {
   return (
     <div className="App">
       <div class="container">

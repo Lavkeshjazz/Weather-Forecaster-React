@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getWeatherofCity } from "../api/index";
+import { getWeatherofCity, getWeatherofLocation } from "../api/index";
 import Card1 from './Card1';
 import Card2 from './Card2';
 import Card3 from './Card3';
@@ -9,53 +9,80 @@ import OopsPage from './OopsPage';
 
 const ThreeMainCard = () => {
     const [weatherData, setWeatherData] = useState(null);
-    const [cityName, setCityName] = useState("New Delhi"); // Default city is New Delhi
+    const [cityName, setCityName] = useState(null); // Initially null to determine if the city is set by user or by location fetch
     const [inputValue, setInputValue] = useState(""); // For managing input value
     const [error, setError] = useState(false); // For managing error state
 
     useEffect(() => {
-        getWeatherofCity(cityName)
-            .then((weather) => {
-                console.log("Weather data for", cityName, ":", weather);
+        const fetchInitialWeather = async () => {
+            try {
+                const position = await getUserLocation();
+                const weather = await getWeatherofLocation(position.coords.latitude, position.coords.longitude);
                 setWeatherData(weather);
-                setError(false); // Reset error state
-            })
-            .catch(() => {
-                console.error("Failed to fetch weather data for", cityName);
-                setWeatherData(null);
-                setError(true); // Set error state
-            });
-    }, [cityName]); // Fetch weather data whenever cityName changes
+                setCityName("Your Location");
+                setError(false);
+            } catch (error) {
+                console.error("Failed to fetch weather data for user's location:", error);
+                fetchWeatherByCity("New Delhi"); // Fallback to default city only if location fetch fails
+            }
+        };
+
+        fetchInitialWeather();
+    }, []);
+
+    useEffect(() => {
+        if (cityName && cityName !== "Your Location") {
+            fetchWeatherByCity(cityName);
+        }
+    }, [cityName]);
+
+    const fetchWeatherByCity = async (city) => {
+        try {
+            const weather = await getWeatherofCity(city);
+            setWeatherData(weather);
+            setError(false);
+        } catch (error) {
+            console.error("Failed to fetch weather data for city:", error);
+            setWeatherData(null);
+            setError(true);
+        }
+    };
+
+    const getUserLocation = () => {
+        return new Promise((resolve, reject) => {
+            navigator.geolocation.getCurrentPosition(resolve, reject);
+        });
+    };
 
     const handleCityNameChange = (newCityName) => {
         setCityName(newCityName);
     };
 
     return (
-      <div>
-          <Navbar 
-              onCityNameChange={handleCityNameChange} 
-              inputValue={inputValue} 
-              setInputValue={setInputValue} 
-          />
-          <div className="container">
-              {error ? (
-                  <OopsPage />
-              ) : (
-                  <>
-                      <Heading cityName={cityName} />
-                      {weatherData && ( // Check if weatherData is not null
-                          <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
-                              <Card1 temp={weatherData.temp} mintemp={weatherData.min_temp} maxtemp={weatherData.max_temp} />
-                              <Card2 wspeed={weatherData.wind_speed} wdegree={weatherData.wind_degrees} />
-                              <Card3 hmdtiy={weatherData.humidity} temp={weatherData.feels_like} />
-                          </div>
-                      )}
-                  </>
-              )}
-          </div>
-      </div>
-  );
-}
+        <div>
+            <Navbar 
+                onCityNameChange={handleCityNameChange} 
+                inputValue={inputValue} 
+                setInputValue={setInputValue} 
+            />
+            <div className="container">
+                {error ? (
+                    <OopsPage />
+                ) : (
+                    <>
+                        <Heading cityName={cityName || "Loading..."} />
+                        {weatherData && ( // Check if weatherData is not null
+                            <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                                <Card1 temp={weatherData.temp} mintemp={weatherData.min_temp} maxtemp={weatherData.max_temp} />
+                                <Card2 wspeed={weatherData.wind_speed} wdegree={weatherData.wind_degrees} />
+                                <Card3 hmdtiy={weatherData.humidity} temp={weatherData.feels_like} />
+                            </div>
+                        )}
+                    </>
+                )}
+            </div>
+        </div>
+    );
+};
 
 export default ThreeMainCard;

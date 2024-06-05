@@ -20,6 +20,15 @@ export const getWeatherofCity = async (cityName) => {
     return response.data;
 }
 
+export const getWeatherofLocation = async (latitude,longitude) => {
+  //console.log('Making request to weather API');
+  const response = await axios.get(API_URL+"?lat="+latitude+"&lon="+longitude,options, {
+      method: "GET",
+  });
+  //console.log('Received response:', response);
+  return response.data;
+}
+
 export const getWeatherofDelhi = async () => {
     //console.log('Making request to weather API');
     const response = await axios.get(API_URL+"?city=New Delhi",options, {

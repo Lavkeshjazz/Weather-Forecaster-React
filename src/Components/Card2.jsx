@@ -5,7 +5,7 @@ const Card2=(props)=>{
         <div class="col">
         <div class="card card1 mb-4 rounded-3 shadow-sm">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Wind & Timings <img src="/public/images/wind.png" height="35px" width="35px"/></h4>
+            <h4 class="my-0 fw-normal">Wind & Timings <img src="../public/images/wind.png" height="35px" width="35px"/></h4>
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">{props.wspeed}<small class="text-body-secondary fw-light"> Km/hr</small></h1>
