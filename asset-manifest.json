@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Weather-Forecaster-React/static/css/main.31899743.css",
-    "main.js": "/Weather-Forecaster-React/static/js/main.30ffadec.js",
-    "static/js/453.2bc23b9a.chunk.js": "/Weather-Forecaster-React/static/js/453.2bc23b9a.chunk.js",
-    "static/media/sky_02.jpg": "/Weather-Forecaster-React/static/media/sky_02.abfd9baac050c48da61b.jpg",
-    "index.html": "/Weather-Forecaster-React/index.html",
-    "main.31899743.css.map": "/Weather-Forecaster-React/static/css/main.31899743.css.map",
-    "main.30ffadec.js.map": "/Weather-Forecaster-React/static/js/main.30ffadec.js.map",
-    "453.2bc23b9a.chunk.js.map": "/Weather-Forecaster-React/static/js/453.2bc23b9a.chunk.js.map"
+    "main.css": "/Weather-Forecaster-React/New/static/css/main.e52241b3.css",
+    "main.js": "/Weather-Forecaster-React/New/static/js/main.f7b7f879.js",
+    "static/js/453.2bc23b9a.chunk.js": "/Weather-Forecaster-React/New/static/js/453.2bc23b9a.chunk.js",
+    "static/media/sky_02.jpg": "/Weather-Forecaster-React/New/static/media/sky_02.abfd9baac050c48da61b.jpg",
+    "index.html": "/Weather-Forecaster-React/New/index.html",
+    "main.e52241b3.css.map": "/Weather-Forecaster-React/New/static/css/main.e52241b3.css.map",
+    "main.f7b7f879.js.map": "/Weather-Forecaster-React/New/static/js/main.f7b7f879.js.map",
+    "453.2bc23b9a.chunk.js.map": "/Weather-Forecaster-React/New/static/js/453.2bc23b9a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.31899743.css",
-    "static/js/main.30ffadec.js"
+    "static/css/main.e52241b3.css",
+    "static/js/main.f7b7f879.js"
   ]
 }
