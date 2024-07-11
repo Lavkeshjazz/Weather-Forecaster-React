@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Weather-Forecaster-React/static/css/main.901dc755.css",
-    "main.js": "/Weather-Forecaster-React/static/js/main.3590f4b9.js",
-    "static/js/453.2bc23b9a.chunk.js": "/Weather-Forecaster-React/static/js/453.2bc23b9a.chunk.js",
-    "static/media/sky_02.jpg": "/Weather-Forecaster-React/static/media/sky_02.abfd9baac050c48da61b.jpg",
-    "static/media/cloudy.png": "/Weather-Forecaster-React/static/media/cloudy.54cfd202df386e981e62.png",
-    "static/media/humidity.png": "/Weather-Forecaster-React/static/media/humidity.34a5da12e6fb738edd43.png",
-    "static/media/temperature-sensor.png": "/Weather-Forecaster-React/static/media/temperature-sensor.b7f433823598f5fd0f52.png",
-    "index.html": "/Weather-Forecaster-React/index.html",
-    "main.901dc755.css.map": "/Weather-Forecaster-React/static/css/main.901dc755.css.map",
-    "main.3590f4b9.js.map": "/Weather-Forecaster-React/static/js/main.3590f4b9.js.map",
-    "453.2bc23b9a.chunk.js.map": "/Weather-Forecaster-React/static/js/453.2bc23b9a.chunk.js.map"
+    "main.css": "/Weather-For/static/css/main.a583b046.css",
+    "main.js": "/Weather-For/static/js/main.4408c14c.js",
+    "static/js/453.2bc23b9a.chunk.js": "/Weather-For/static/js/453.2bc23b9a.chunk.js",
+    "static/media/sky_02.jpg": "/Weather-For/static/media/sky_02.abfd9baac050c48da61b.jpg",
+    "static/media/cloudy.png": "/Weather-For/static/media/cloudy.54cfd202df386e981e62.png",
+    "static/media/humidity.png": "/Weather-For/static/media/humidity.34a5da12e6fb738edd43.png",
+    "static/media/temperature-sensor.png": "/Weather-For/static/media/temperature-sensor.b7f433823598f5fd0f52.png",
+    "index.html": "/Weather-For/index.html",
+    "main.a583b046.css.map": "/Weather-For/static/css/main.a583b046.css.map",
+    "main.4408c14c.js.map": "/Weather-For/static/js/main.4408c14c.js.map",
+    "453.2bc23b9a.chunk.js.map": "/Weather-For/static/js/453.2bc23b9a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.901dc755.css",
-    "static/js/main.3590f4b9.js"
+    "static/css/main.a583b046.css",
+    "static/js/main.4408c14c.js"
   ]
 }
