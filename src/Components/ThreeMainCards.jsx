@@ -73,9 +73,9 @@ const ThreeMainCard = () => {
                         <Heading cityName={cityName || "Loading..."} />
                         {weatherData && ( // Check if weatherData is not null
                             <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
-                                <Card1 temp={weatherData.temp} mintemp={weatherData.min_temp} maxtemp={weatherData.max_temp} />
-                                <Card2 wspeed={weatherData.wind_speed} wdegree={weatherData.wind_degrees} />
-                                <Card3 hmdtiy={weatherData.humidity} temp={weatherData.feels_like} />
+                                <Card1 temp={weatherData.current.temp_c} mintemp={weatherData.current.heatindex_c} maxtemp={weatherData.current.condition.text} />
+                                <Card2 wspeed={weatherData.current.wind_kph} wdegree={weatherData.current.wind_degree} />
+                                <Card3 hmdtiy={weatherData.current.humidity} temp={weatherData.current.feelslike_c} />
                             </div>
                         )}
                     </>

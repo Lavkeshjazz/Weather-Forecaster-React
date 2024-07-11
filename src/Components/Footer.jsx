@@ -62,36 +62,36 @@ const Footer = () => {
             <th style={{ width: "10%" }}></th>
             <th style={{ width: "10%" }}>Feels like</th>
             <th style={{ width: "10%" }}>Humidity</th>
-            <th style={{ width: "10%" }}>Max Temperature</th>
-            <th style={{ width: "10%" }}>Min Temperature</th>
+            <th style={{ width: "10%" }}>Heat Index</th>
+            <th style={{ width: "10%" }}>Forcast</th>
             <th style={{ width: "10%" }}>Temperature</th>
             <th style={{ width: "10%" }}>Wind Speed</th>
           </tr>
         </thead>
         <tbody>
         {weatherData1 ? (
-            <Delhi feels1={weatherData1.temp} humid1={weatherData1.humidity} max1={weatherData1.max_temp} min1={weatherData1.min_temp} ws1={weatherData1.wind_speed}/>
+            <Delhi feels1={weatherData1.current.temp_c} humid1={weatherData1.current.humidity} max1={weatherData1.current.heatindex_c} min1={weatherData1.current.condition.text} ws1={weatherData1.current.wind_kph}/>
           ) : <p>No Data</p>}
         
         {weatherData2 ? (
-            <Mumbai feels2={weatherData2.temp} humid2={weatherData2.humidity} max2={weatherData2.max_temp} min2={weatherData2.min_temp} ws2={weatherData2.wind_speed}/>
+            <Mumbai feels2={weatherData2.current.temp_c} humid2={weatherData2.current.humidity} max2={weatherData2.current.heatindex_c} min2={weatherData2.current.condition.text} ws2={weatherData2.current.wind_kph}/>
           ) : <p>No Data</p>}
         </tbody>
         <tbody>
         {weatherData3 ? (
-            <Kolkata feels3={weatherData3.temp} humid3={weatherData3.humidity} max3={weatherData3.max_temp} min3={weatherData3.min_temp} ws3={weatherData3.wind_speed}/>
+            <Kolkata feels3={weatherData3.current.temp_c} humid3={weatherData3.current.humidity} max3={weatherData3.current.heatindex_c} min3={weatherData3.current.condition.text} ws3={weatherData3.current.wind_kph}/>
           ) : <p>No Data</p>}
 
         {weatherData4 ? (
-            <Bangalore feels4={weatherData4.temp} humid4={weatherData4.humidity} max4={weatherData4.max_temp} min4={weatherData4.min_temp} ws4={weatherData4.wind_speed}/>
+            <Bangalore feels4={weatherData4.current.temp_c} humid4={weatherData4.current.humidity} max4={weatherData4.current.heatindex_c} min4={weatherData4.current.condition.text} ws4={weatherData4.current.wind_kph}/>
           ) : <p>No Data</p>}
-           
+
         {weatherData5 ? (
-            <Pune feels5={weatherData5.temp} humid5={weatherData5.humidity} max5={weatherData5.max_temp} min5={weatherData5.min_temp} ws5={weatherData5.wind_speed}/>
+            <Pune feels5={weatherData5.current.temp_c} humid5={weatherData5.current.humidity} max5={weatherData5.current.heatindex_c} min5={weatherData5.current.condition.text} ws5={weatherData5.current.wind_kph}/>
           ) : <p>No Data</p>}
 
         {weatherData6 ? (
-            <Hyderabad feels6={weatherData6.temp} humid6={weatherData6.humidity} max6={weatherData6.max_temp} min6={weatherData6.min_temp} ws6={weatherData6.wind_speed}/>
+            <Hyderabad feels6={weatherData6.current.temp_c} humid6={weatherData6.current.humidity} max6={weatherData6.current.heatindex_c} min6={weatherData6.current.condition.text} ws6={weatherData6.current.wind_kph}/>
           ) : <p>No Data</p>}
         </tbody>
         </table>

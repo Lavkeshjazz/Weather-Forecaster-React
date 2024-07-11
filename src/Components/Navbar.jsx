@@ -6,7 +6,6 @@ const Navbar = ({ onCityNameChange, inputValue, setInputValue }) => {
             <nav className="navbar navbar-expand-lg navbar-light ">
                 <div className="container-fluid d-flex justify-content-between align-items-center">
                     <a className="navbar-brand d-flex align-items-center" href="/">
-                        <img src="../public/images/cloudy.png" height="50px" width="50px" alt="Weather Forecast"/>
                         <span className="ms-2">Weather Forecast</span>
                     </a>
                     <div className="d-flex">

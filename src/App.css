@@ -51,6 +51,62 @@ body{
    background-attachment:fixed;
   color: #ffffff;
 }
+
+.cardreader1 {
+  background-image: url('/public/images/temperature-sensor.png');
+  background-size: contain; /* Adjust this as necessary */
+  background-repeat: no-repeat;
+  background-position: 70%;
+  padding-right: 45px; /* Adjust to make space for the image */
+  background-size: 8%;
+}
+
+.cardreader1 h4 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cardreader2 {
+  background-image: url('/public/images/wind.png');
+  background-size: contain; /* Adjust this as necessary */
+  background-repeat: no-repeat;
+  background-position: 74%;
+  padding-right: 45px; /* Adjust to make space for the image */
+  background-size: 8%;
+}
+
+.cardreader2 h4 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.cardreader3 {
+  background-image: url('/public/images/humidity.png');
+  background-size: contain; /* Adjust this as necessary */
+  background-repeat: no-repeat;
+  background-position: 63%;
+  padding-right: 45px; /* Adjust to make space for the image */
+  background-size: 8%;
+}
+
+.cardreader3 h4 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar-brand {
+  background-image: url('/public/images/cloudy.png');
+  background-size: contain; /* Adjust this as necessary */
+  background-repeat: no-repeat;
+  background-position: 97%;
+  padding-right: 45px; /* Adjust to make space for the image */
+  background-size: 17%;
+}
+
+
+
+
 .btn-outline-success{
   color: white;
   border:1px solid white;

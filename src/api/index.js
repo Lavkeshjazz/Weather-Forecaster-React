@@ -1,5 +1,6 @@
 import axios from "axios";
-const API_URL = "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather";
+const API_URL = "http://api.weatherapi.com/v1/current.json?";
+const key = 'd68355196f9f4ce680b170313241107';
 
 const options = {
     // method: 'GET',
@@ -13,7 +14,7 @@ const options = {
 
 export const getWeatherofCity = async (cityName) => {
     //console.log('Making request to weather API');
-    const response = await axios.get(API_URL+"?city="+cityName,options, {
+    const response = await axios.get(API_URL+"key="+key+"&q="+cityName+"&aqi=no",options, {
         method: "GET",
     });
     //console.log('Received response:', response);
@@ -22,7 +23,7 @@ export const getWeatherofCity = async (cityName) => {
 
 export const getWeatherofLocation = async (latitude,longitude) => {
   //console.log('Making request to weather API');
-  const response = await axios.get(API_URL+"?lat="+latitude+"&lon="+longitude,options, {
+  const response = await axios.get(API_URL+"key="+key+"&q="+latitude+","+longitude+"&aqi=no",options, {
       method: "GET",
   });
   //console.log('Received response:', response);
@@ -31,7 +32,7 @@ export const getWeatherofLocation = async (latitude,longitude) => {
 
 export const getWeatherofDelhi = async () => {
     //console.log('Making request to weather API');
-    const response = await axios.get(API_URL+"?city=New Delhi",options, {
+    const response = await axios.get(API_URL+"key="+key+"&q="+"New Delhi"+"&aqi=no",options, {
         method: "GET",
     });
     //console.log('Received response:', response);
@@ -40,7 +41,7 @@ export const getWeatherofDelhi = async () => {
 
 export const getWeatherofMumbai = async () => {
   //console.log('Making request to weather API');
-  const response = await axios.get(API_URL+"?city=Mumbai",options, {
+  const response = await axios.get(API_URL+"key="+key+"&q="+"Mumbai"+"&aqi=no",options, {
       method: "GET",
   });
   //console.log('Received response:', response);
@@ -49,7 +50,7 @@ export const getWeatherofMumbai = async () => {
 
 export const getWeatherofKolkata = async () => {
  // console.log('Making request to weather API');
-  const response = await axios.get(API_URL+"?city=Kolkata",options, {
+  const response = await axios.get(API_URL+"key="+key+"&q="+"Kolkata"+"&aqi=no",options, {
       method: "GET",
   });
  // console.log('Received response:', response);
@@ -58,7 +59,7 @@ export const getWeatherofKolkata = async () => {
 
 export const getWeatherofBangalore = async () => {
   //console.log('Making request to weather API');
-  const response = await axios.get(API_URL+"?city=Bangalore",options, {
+  const response = await axios.get(API_URL+"key="+key+"&q="+"Bangalore"+"&aqi=no",options, {
       method: "GET",
   });
   //console.log('Received response:', response);
@@ -67,7 +68,7 @@ export const getWeatherofBangalore = async () => {
 
 export const getWeatherofPune = async () => {
   //console.log('Making request to weather API');
-  const response = await axios.get(API_URL+"?city=Pune",options, {
+  const response = await axios.get(API_URL+"key="+key+"&q="+"Pune"+"&aqi=no",options, {
       method: "GET",
   });
   //console.log('Received response:', response);
@@ -76,7 +77,7 @@ export const getWeatherofPune = async () => {
 
 export const getWeatherofHyderabad = async () => {
   //console.log('Making request to weather API');
-  const response = await axios.get(API_URL+"?city=Hyderabad",options, {
+  const response = await axios.get(API_URL+"key="+key+"&q="+"Hyderabad"+"&aqi=no",options, {
       method: "GET",
   });
   //console.log('Received response:', response);
